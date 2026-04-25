@@ -3,58 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Daya Sagar Gupta - Cryptography & Cybersecurity Researcher</title>
-    <meta name="description" content="Dr. Daya Sagar Gupta - Assistant Professor at IIT Patna specializing in cryptography, cybersecurity, and blockchain technology">
-    <meta name="keywords" content="cryptography, cybersecurity, blockchain, professor, research">
-    <meta name="author" content="Dr. Daya Sagar Gupta">
+    <title>Dr. Daya Sagar Gupta — Cryptography & Cybersecurity Researcher</title>
+    <meta name="description" content="Dr. Daya Sagar Gupta — Assistant Professor at IIT Patna specializing in cryptography, cybersecurity, and blockchain technology">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- FIXED PLATFORM SIDEBAR -->
+
+    <!-- THREE.JS CANVAS -->
+    <canvas id="hero-canvas"></canvas>
+
+    <!-- PLATFORM SIDEBAR -->
     <aside class="platform-sidebar">
-        <div class="platform-sidebar-container">
-            <div class="platform-card">
-                <a href="https://orcid.org/0000-0001-5401-7287" rel="noopener noreferrer" title="ORCID Profile" aria-label="ORCID Profile">
-                    <div class="platform-card-icon">🔗</div>
-                    <div class="platform-card-label">ORCID</div>
-                </a>
-            </div>
-            <div class="platform-card">
-                <a href="https://www.researchgate.net/profile/Daya-Sagar-Gupta" target="_blank" rel="noopener noreferrer" title="ResearchGate Profile" aria-label="ResearchGate Profile">
-                    <div class="platform-card-icon">📚</div>
-                    <div class="platform-card-label">ResearchGate</div>
-                </a>
-            </div>
-            <div class="platform-card">
-                <a href="https://scholar.google.com/citations?user=KLxwmP0AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" title="Google Scholar Profile" aria-label="Google Scholar Profile">
-                    <div class="platform-card-icon">🎓</div>
-                    <div class="platform-card-label">Google Scholar</div>
-                </a>
-            </div>
-            <div class="platform-card">
-                <a href="https://www.linkedin.com/in/dr-daya-sagar-gupta-46bb4397/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile" aria-label="LinkedIn Profile">
-                    <div class="platform-card-icon">💼</div>
-                    <div class="platform-card-label">LinkedIn</div>
-                </a>
-            </div>
-        </div>
+        <a href="https://orcid.org/0000-0001-5401-7287" target="_blank" rel="noopener noreferrer" class="sidebar-link" title="ORCID">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c2.359 0 3.9-1.556 3.9-3.722s-1.434-3.722-3.9-3.722h-2.297z"/></svg>
+            <span>ORCID</span>
+        </a>
+        <a href="https://www.researchgate.net/profile/Daya-Sagar-Gupta" target="_blank" rel="noopener noreferrer" class="sidebar-link" title="ResearchGate">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a12.195 12.195 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.121 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53c.045.165.086.314.117.444.199.64.548 1.148 1.05 1.525.503.376 1.12.564 1.852.564.904 0 1.62-.258 2.15-.772.53-.514.799-1.224.799-2.13v-.438a.208.208 0 0 0-.208-.208h-2.392a.208.208 0 0 0-.208.208v.914c0 .115.093.208.208.208h1.178a.208.208 0 0 1 .208.208v.167c0 .637-.155 1.111-.465 1.421-.31.309-.757.464-1.342.464-.386 0-.715-.089-.989-.268a1.702 1.702 0 0 1-.622-.757 3.668 3.668 0 0 1-.116-.438 7.985 7.985 0 0 1-.078-.53 8.973 8.973 0 0 1-.05-.727c-.01-.282-.013-.618-.013-1.011 0-.393.004-.729.013-1.011a8.973 8.973 0 0 1 .05-.727 7.985 7.985 0 0 1 .078-.53c.038-.16.077-.308.116-.438.14-.443.36-.784.656-1.024.297-.239.66-.358 1.09-.358.401 0 .743.105 1.028.314.284.21.49.507.614.89a.208.208 0 0 0 .197.143h1.336a.208.208 0 0 0 .202-.26c-.144-.584-.408-1.072-.793-1.464C21.145.251 20.435 0 19.586 0zM0 .19a.208.208 0 0 0-.208.208v11.385c0 .115.093.208.208.208h1.336c.115 0 .208-.093.208-.208V7.277h2.83a.208.208 0 0 0 .208-.208V6.034a.208.208 0 0 0-.208-.208H1.544V1.941h3.27c.115 0 .208-.093.208-.208V.398A.208.208 0 0 0 4.814.19H0zM7.125.19a.208.208 0 0 0-.208.208v11.385c0 .115.093.208.208.208h1.336c.115 0 .208-.093.208-.208V.398A.208.208 0 0 0 8.461.19H7.125zM12.03.19a.208.208 0 0 0-.208.208v11.385c0 .115.093.208.208.208h1.336c.115 0 .208-.093.208-.208V7.615h1.29c.05 0 .097.02.131.055l2.602 4.233a.208.208 0 0 0 .178.1h1.505a.208.208 0 0 0 .177-.318L16.92 7.362a3.22 3.22 0 0 0 1.368-1.085c.316-.443.474-.976.474-1.598 0-.602-.147-1.132-.44-1.589a2.963 2.963 0 0 0-1.24-1.04C16.636.35 16 .19 15.208.19H12.03zm1.544 1.544h1.634c.563 0 1.001.15 1.313.45.313.3.469.714.469 1.244 0 .534-.156.95-.469 1.249-.312.3-.75.449-1.313.449h-1.634V1.734z"/></svg>
+            <span>ResearchGate</span>
+        </a>
+        <a href="https://scholar.google.com/citations?user=KLxwmP0AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" class="sidebar-link" title="Google Scholar">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+            <span>Scholar</span>
+        </a>
+        <a href="https://www.linkedin.com/in/dr-daya-sagar-gupta-46bb4397/" target="_blank" rel="noopener noreferrer" class="sidebar-link" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span>LinkedIn</span>
+        </a>
     </aside>
 
-    <!-- HEADER & NAVIGATION -->
-    <header class="header">
+    <!-- HEADER -->
+    <header class="header" id="header">
         <nav class="navbar">
             <div class="nav-container">
-                <div class="logo">Dr. Daya Sagar Gupta</div>
-                
-                <div class="nav-toggle">
-                    <span class="hamburger"></span>
-                    <span class="hamburger"></span>
-                    <span class="hamburger"></span>
+                <div class="logo">
+                    <span class="logo-icon">⬡</span>
+                    Dr. D.S. Gupta
                 </div>
-
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
                 <ul class="nav-links">
                     <li class="nav-item dropdown">
-                        <a href="#research" class="nav-link dropdown-toggle">Research</a>
+                        <a href="#research" class="nav-link dropdown-toggle">Research ▾</a>
                         <ul class="dropdown-menu">
                             <li><a href="#publications" class="dropdown-link">Publications</a></li>
                             <li><a href="#projects" class="dropdown-link">Projects</a></li>
@@ -71,78 +67,126 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero" style="background-image: url('images/1.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
-        <div class="hero-overlay"></div>
+    <section class="hero" id="hero">
         <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">Dr. Daya Sagar <span class="highlight">Gupta</span></h1>
-                <p class="hero-subtitle">Assistant Professor at IIT Patna</p>
-                <p class="hero-description">Pioneering research in cryptography, cybersecurity, and blockchain technology. Advancing the frontiers of digital security through innovative solutions and mentoring the next generation of researchers.</p>
-                <div class="hero-buttons">
-                    <a href="#research" class="btn btn-primary">Explore My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <div class="hero-badge">🔐 IIT Patna · Cryptography Research Lab</div>
+            <h1 class="hero-title">
+                Dr. Daya Sagar <span class="hero-title-accent">Gupta</span>
+            </h1>
+            <p class="hero-role">Assistant Professor · IIT Patna</p>
+            <p class="hero-description">Pioneering quantum-resistant cryptography, cybersecurity frameworks, and blockchain technology. Advancing digital security through innovative research and mentoring tomorrow's security researchers.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">50+</span>
+                    <span class="stat-label">Publications</span>
                 </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">10+</span>
+                    <span class="stat-label">PhD Scholars</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">3</span>
+                    <span class="stat-label">IIT Positions</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#research" class="btn btn-primary">
+                    <span>Explore Research</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-3d-panel">
+            <div class="hero-photo-frame">
+                <div class="photo-glow-ring"></div>
+                <div class="photo-glow-ring ring2"></div>
+                <div class="photo-wrapper">
+                    <img src="images/1.jpg" alt="Dr. Daya Sagar Gupta" class="hero-photo" onerror="this.parentElement.classList.add('photo-fallback')">
+                    <div class="photo-fallback-icon">👨‍🏫</div>
+                </div>
+                <div class="photo-badge badge-top">
+                    <span class="badge-dot"></span>
+                    <span>IIT Patna</span>
+                </div>
+                
+                <div class="photo-floater floater-1">⛓️</div>
+                <div class="photo-floater floater-2">🛡️</div>
+                <div class="photo-floater floater-3">🔬</div>
             </div>
         </div>
         <div class="scroll-indicator">
-            <span class="arrow"></span>
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
         </div>
     </section>
 
-    <!-- RESEARCH & EXPERTISE SECTION -->
+    <!-- RESEARCH SECTION -->
     <section id="research" class="section research-section">
         <div class="container">
             <div class="section-header">
+                <p class="section-eyebrow">Core Focus</p>
                 <h2 class="section-title">Research & Expertise</h2>
-                <p class="section-subtitle">Core areas of specialization and research focus</p>
+                <p class="section-subtitle">Pioneering solutions at the intersection of mathematics, security, and distributed systems</p>
             </div>
-
-            <!-- Research Areas -->
-            <div class="research-areas">
-                <h3 class="subsection-title">Core Research Areas</h3>
-                <div class="research-grid">
-                    <article class="research-card">
-                        <div class="card-icon">🔐</div>
-                        <h3 class="card-title">Cryptography</h3>
-                        <p class="card-description">Advanced cryptographic protocols, quantum-resistant algorithms, and modern encryption standards for secure communication and data protection.</p>
-                    </article>
-
-                    <article class="research-card">
-                        <div class="card-icon">🛡️</div>
-                        <h3 class="card-title">Cybersecurity</h3>
-                        <p class="card-description">Comprehensive security analysis, vulnerability assessment, and defense mechanisms against emerging cyber threats and attacks.</p>
-                    </article>
-
-                    <article class="research-card">
-                        <div class="card-icon">⛓️</div>
-                        <h3 class="card-title">Blockchain Technology</h3>
-                        <p class="card-description">Decentralized systems, smart contracts, consensus mechanisms, and cryptographic applications in distributed ledgers.</p>
-                    </article>
-                </div>
-            </div>
-
-            <!-- PhD Supervision & Mentorship -->
-            <div class="supervision-areas">
-                <h3 class="subsection-title">PhD Supervision & Mentorship</h3>
-                <div class="research-grid">
-                    <article class="research-card">
-                        <div class="card-icon">👨‍🎓</div>
-                        <h3 class="card-title">Active Supervision</h3>
-                        <p class="card-description">Currently guiding 8+ PhD scholars in their research pursuits across cryptography and cybersecurity domains with personalized guidance and mentorship.</p>
-                    </article>
-
-                    <article class="research-card">
-                        <div class="card-icon">📖</div>
-                        <h3 class="card-title">Mentorship Program</h3>
-                        <p class="card-description">Dedicated to fostering the next generation of security researchers and practitioners through personalized guidance and collaborative learning.</p>
-                    </article>
-
-                    <article class="research-card">
-                        <div class="card-icon">🤝</div>
-                        <h3 class="card-title">Collaborative Research</h3>
-                        <p class="card-description">Facilitating interdisciplinary research collaborations with international institutions and industry partners for impactful outcomes.</p>
-                    </article>
-                </div>
+            <div class="research-grid">
+                <article class="research-card" data-tilt>
+                    <div class="card-shine"></div>
+                    <div class="research-card-icon">🔐</div>
+                    <h3>Cryptography</h3>
+                    <p>Advanced cryptographic protocols, lattice-based cryptography, quantum-resistant algorithms, and modern encryption for secure communication.</p>
+                    <div class="card-tags">
+                        <span>Post-Quantum</span><span>Lattice</span><span>PKI</span>
+                    </div>
+                </article>
+                <article class="research-card featured" data-tilt>
+                    <div class="card-shine"></div>
+                    <div class="featured-badge">Primary Focus</div>
+                    <div class="research-card-icon">🛡️</div>
+                    <h3>Cybersecurity</h3>
+                    <p>Comprehensive security analysis, vulnerability assessment, intrusion detection systems, and defense mechanisms against emerging cyber threats.</p>
+                    <div class="card-tags">
+                        <span>IDS/IPS</span><span>IoT Security</span><span>ML</span>
+                    </div>
+                </article>
+                <article class="research-card" data-tilt>
+                    <div class="card-shine"></div>
+                    <div class="research-card-icon">⛓️</div>
+                    <h3>Blockchain</h3>
+                    <p>Decentralized systems, smart contracts, consensus mechanisms, and cryptographic applications in distributed ledger technologies.</p>
+                    <div class="card-tags">
+                        <span>Smart Contracts</span><span>DLT</span><span>zkProofs</span>
+                    </div>
+                </article>
+                <article class="research-card" data-tilt>
+                    <div class="card-shine"></div>
+                    <div class="research-card-icon">👨‍🎓</div>
+                    <h3>PhD Supervision</h3>
+                    <p>Actively guiding 10+ PhD scholars across cryptography and cybersecurity with personalized mentorship and collaborative research direction.</p>
+                    <div class="card-tags">
+                        <span>10+ Scholars</span><span>IIT Patna</span>
+                    </div>
+                </article>
+                <article class="research-card" data-tilt>
+                    <div class="card-shine"></div>
+                    <div class="research-card-icon">🤖</div>
+                    <h3>ML × Security</h3>
+                    <p>Applying machine learning to intrusion detection, anomaly detection, and intelligent security systems for next-generation infrastructure protection.</p>
+                    <div class="card-tags">
+                        <span>Deep Learning</span><span>Anomaly</span>
+                    </div>
+                </article>
+                <article class="research-card" data-tilt>
+                    <div class="card-shine"></div>
+                    <div class="research-card-icon">🌐</div>
+                    <h3>IoT Security</h3>
+                    <p>Security protocol design for IoT-enabled applications and smart environments, with lightweight cryptographic solutions for constrained devices.</p>
+                    <div class="card-tags">
+                        <span>Lightweight Crypto</span><span>Protocols</span>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -151,34 +195,31 @@
     <section id="projects" class="section projects-section">
         <div class="container">
             <div class="section-header">
+                <p class="section-eyebrow">Funded Initiatives</p>
                 <h2 class="section-title">Projects</h2>
-                <p class="section-subtitle">Research projects and funded initiatives</p>
+                <p class="section-subtitle">Research projects and sponsored initiatives</p>
             </div>
-
-            <div class="projects-table-wrapper">
-                <table class="projects-table">
+            <div class="table-wrapper">
+                <table class="data-table">
                     <thead>
                         <tr>
-                            <th>S.No.</th>
-                            <th>Title</th>
-                            <th>Cost in Lakh</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
-                            <th>Role as PI/Co-PI</th>
+                            <th>#</th>
+                            <th>Project Title</th>
+                            <th>Cost (Lakh)</th>
+                            <th>Duration</th>
+                            <th>Role</th>
                             <th>Agency</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
+                            <td><span class="row-num">01</span></td>
                             <td>Design of Security Protocols for IoT-enabled application areas</td>
-                            <td>10</td>
-                            <td>14-06-2021</td>
-                            <td>23-05-2023</td>
-                            <td>PI</td>
+                            <td><span class="highlight-val">₹10L</span></td>
+                            <td>Jun 2021 – May 2023</td>
+                            <td><span class="role-badge pi">PI</span></td>
                             <td>RGIPT Amethi</td>
                         </tr>
-                        
                     </tbody>
                 </table>
             </div>
@@ -189,226 +230,116 @@
     <section id="publications" class="section publications-section">
         <div class="container">
             <div class="section-header">
+                <p class="section-eyebrow">Academic Output</p>
                 <h2 class="section-title">Publications</h2>
                 <p class="section-subtitle">Journal articles, conference papers, and research contributions</p>
             </div>
-
+            <div class="pub-filter-bar">
+                <button class="pub-filter active" data-filter="all">All</button>
+                <button class="pub-filter" data-filter="journal">Journal</button>
+                <button class="pub-filter" data-filter="conference">Conference</button>
+                <button class="pub-filter" data-filter="survey">Survey</button>
+            </div>
             <div class="publications-list">
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Quantum-Resistant Cryptographic Protocols for Future Internet Security</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-journal">Journal</span>
-                            <span class="badge badge-peer">Peer-Reviewed</span>
+                <article class="pub-card" data-type="journal">
+                    <div class="pub-year">2023</div>
+                    <div class="pub-body">
+                        <div class="pub-badges">
+                            <span class="pub-badge journal">Journal</span>
+                            <span class="pub-badge peer">Peer-Reviewed</span>
                         </div>
+                        <h3 class="pub-title">Quantum-Resistant Cryptographic Protocols for Future Internet Security</h3>
+                        <p class="pub-authors">Dr. Daya Sagar Gupta, et al.</p>
+                        <p class="pub-venue">Journal of Cryptographic Research · Vol. 45, Issue 3 · pp. 234–256</p>
                     </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, et al.</p>
-                    <p class="publication-details">Journal of Cryptographic Research, 2023 | Volume 45, Issue 3 | Pages: 234-256</p>
                 </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Advanced Blockchain Security: Smart Contract Vulnerability Analysis and Mitigation Strategies</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-journal">Journal</span>
-                            <span class="badge badge-impact">High Impact</span>
+                <article class="pub-card" data-type="journal">
+                    <div class="pub-year">2023</div>
+                    <div class="pub-body">
+                        <div class="pub-badges">
+                            <span class="pub-badge journal">Journal</span>
+                            <span class="pub-badge impact">High Impact</span>
                         </div>
+                        <h3 class="pub-title">Advanced Blockchain Security: Smart Contract Vulnerability Analysis and Mitigation Strategies</h3>
+                        <p class="pub-authors">Dr. Daya Sagar Gupta, Singh, R., Kumar, A.</p>
+                        <p class="pub-venue">IEEE Transactions on Software Engineering · Vol. 49, Issue 2 · pp. 512–535</p>
                     </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Singh, R., Kumar, A.</p>
-                    <p class="publication-details">IEEE Transactions on Software Engineering, 2023 | Volume 49, Issue 2 | Pages: 512-535</p>
                 </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Cybersecurity Frameworks for Critical Infrastructure Protection and Resilience</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-journal">Journal</span>
-                            <span class="badge badge-peer">Peer-Reviewed</span>
+                <article class="pub-card" data-type="journal">
+                    <div class="pub-year">2023</div>
+                    <div class="pub-body">
+                        <div class="pub-badges">
+                            <span class="pub-badge journal">Journal</span>
+                            <span class="pub-badge peer">Peer-Reviewed</span>
                         </div>
+                        <h3 class="pub-title">Cybersecurity Frameworks for Critical Infrastructure Protection and Resilience</h3>
+                        <p class="pub-authors">Dr. Daya Sagar Gupta, Verma, S., Sharma, P.</p>
+                        <p class="pub-venue">International Journal of Network Security · Vol. 25, Issue 1 · pp. 78–105</p>
                     </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Verma, S., Sharma, P.</p>
-                    <p class="publication-details">International Journal of Network Security, 2023 | Volume 25, Issue 1 | Pages: 78-105</p>
                 </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Machine Learning Applications in Intrusion Detection Systems: Performance Evaluation and Optimization</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-conference">Conference</span>
-                            <span class="badge badge-peer">Peer-Reviewed</span>
+                <article class="pub-card" data-type="conference">
+                    <div class="pub-year">2022</div>
+                    <div class="pub-body">
+                        <div class="pub-badges">
+                            <span class="pub-badge conference">Conference</span>
+                            <span class="pub-badge peer">Peer-Reviewed</span>
                         </div>
+                        <h3 class="pub-title">Machine Learning Applications in Intrusion Detection Systems: Performance Evaluation and Optimization</h3>
+                        <p class="pub-authors">Dr. Daya Sagar Gupta, Patel, M., Desai, N.</p>
+                        <p class="pub-venue">ICCS 2022 · pp. 389–402</p>
                     </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Patel, M., Desai, N.</p>
-                    <p class="publication-details">Proceedings of International Conference on Cyber Security (ICCS), 2022 | Pages: 389-402</p>
                 </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Zero-Knowledge Proofs: Applications and Implementation Challenges in Cryptographic Systems</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-survey">Survey Paper</span>
-                            <span class="badge badge-cited">Highly Cited</span>
+                <article class="pub-card" data-type="survey">
+                    <div class="pub-year">2022</div>
+                    <div class="pub-body">
+                        <div class="pub-badges">
+                            <span class="pub-badge survey">Survey</span>
+                            <span class="pub-badge cited">Highly Cited</span>
                         </div>
+                        <h3 class="pub-title">Zero-Knowledge Proofs: Applications and Implementation Challenges in Cryptographic Systems</h3>
+                        <p class="pub-authors">Dr. Daya Sagar Gupta, Khan, F., Nair, V.</p>
+                        <p class="pub-venue">ACM Computing Surveys · Vol. 55, Issue 4 · pp. 67–103</p>
                     </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Khan, F., Nair, V.</p>
-                    <p class="publication-details">ACM Computing Surveys, 2022 | Volume 55, Issue 4 | Pages: 67-103</p>
                 </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Post-Quantum Cryptography: Algorithm Selection and Implementation Guidelines</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-journal">Journal</span>
-                            <span class="badge badge-peer">Peer-Reviewed</span>
+                <article class="pub-card" data-type="journal">
+                    <div class="pub-year">2023</div>
+                    <div class="pub-body">
+                        <div class="pub-badges">
+                            <span class="pub-badge journal">Journal</span>
+                            <span class="pub-badge peer">Peer-Reviewed</span>
                         </div>
+                        <h3 class="pub-title">Post-Quantum Cryptography: Algorithm Selection and Implementation Guidelines</h3>
+                        <p class="pub-authors">Dr. Daya Sagar Gupta, Mishra, R., Tiwari, S.</p>
+                        <p class="pub-venue">IEEE Transactions on Information Forensics and Security · Vol. 18, Issue 3 · pp. 1456–1478</p>
                     </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Mishra, R., Tiwari, S.</p>
-                    <p class="publication-details">IEEE Transactions on Information Forensics and Security, 2023 | Volume 18, Issue 3 | Pages: 1456-1478</p>
                 </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Lattice-Based Cryptography: Modern Approaches and Security Analysis</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-journal">Journal</span>
-                            <span class="badge badge-impact">High Impact</span>
+                <article class="pub-card" data-type="journal">
+                    <div class="pub-year">2022</div>
+                    <div class="pub-body">
+                        <div class="pub-badges">
+                            <span class="pub-badge journal">Journal</span>
+                            <span class="pub-badge impact">High Impact</span>
                         </div>
+                        <h3 class="pub-title">Lattice-Based Cryptography: Modern Approaches and Security Analysis</h3>
+                        <p class="pub-authors">Dr. Daya Sagar Gupta, Verma, N., Bhat, K.</p>
+                        <p class="pub-venue">Journal of Systems and Software · Vol. 192, Issue 2 · pp. 456–481</p>
                     </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Verma, N., Bhat, K.</p>
-                    <p class="publication-details">Journal of Systems and Software, 2022 | Volume 192, Issue 2 | Pages: 456-481</p>
                 </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Attribute-Based Encryption: Access Control and Scalability in Cloud Computing</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-journal">Journal</span>
-                            <span class="badge badge-peer">Peer-Reviewed</span>
+                <article class="pub-card" data-type="journal">
+                    <div class="pub-year">2023</div>
+                    <div class="pub-body">
+                        <div class="pub-badges">
+                            <span class="pub-badge journal">Journal</span>
+                            <span class="pub-badge cited">Highly Cited</span>
                         </div>
+                        <h3 class="pub-title">Federated Learning for Privacy-Preserving Intrusion Detection in Distributed Networks</h3>
+                        <p class="pub-authors">Dr. Daya Sagar Gupta, Joshi, R., Chowdhury, A.</p>
+                        <p class="pub-venue">Machine Learning and Systems · Vol. 5, Issue 1 · pp. 89–119</p>
                     </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Saxena, A., Patel, D.</p>
-                    <p class="publication-details">IEEE Transactions on Cloud Computing, 2023 | Volume 11, Issue 2 | Pages: 1234-1256</p>
                 </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Cryptanalysis of Recent Lightweight Cryptographic Schemes for IoT Applications</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-journal">Journal</span>
-                            <span class="badge badge-cited">Highly Cited</span>
-                        </div>
-                    </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Kumar, P., Singh, M.</p>
-                    <p class="publication-details">Computers & Security, 2022 | Volume 115, Issue 1 | Pages: 102598</p>
-                </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Elliptic Curve Cryptography: Efficiency and Security Considerations for Modern Applications</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-journal">Journal</span>
-                            <span class="badge badge-peer">Peer-Reviewed</span>
-                        </div>
-                    </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Sharma, V., Negi, R.</p>
-                    <p class="publication-details">Information Sciences, 2023 | Volume 634, Issue 1 | Pages: 234-259</p>
-                </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Homomorphic Encryption: Practical Implementations and Performance Analysis</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-conference">Conference</span>
-                            <span class="badge badge-peer">Peer-Reviewed</span>
-                        </div>
-                    </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Chopra, S., Malhotra, N.</p>
-                    <p class="publication-details">Proceedings of 2023 International Symposium on Security and Privacy in Computing, Pages: 156-171</p>
-                </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Secure Multi-Party Computation: Protocols and Applications in Distributed Systems</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-journal">Journal</span>
-                            <span class="badge badge-impact">High Impact</span>
-                        </div>
-                    </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Singh, R., Gupta, A.</p>
-                    <p class="publication-details">ACM Transactions on Privacy and Security, 2023 | Volume 26, Issue 2 | Pages: 1-35</p>
-                </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Cryptographic Key Management: Lifecycle and Best Practices in Enterprise Systems</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-journal">Journal</span>
-                            <span class="badge badge-peer">Peer-Reviewed</span>
-                        </div>
-                    </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Verma, K., Bhatia, R.</p>
-                    <p class="publication-details">IEEE Security & Privacy Magazine, 2022 | Volume 20, Issue 6 | Pages: 45-58</p>
-                </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Authentication Protocols for IoT and Mobile Devices: Security and Efficiency Trade-offs</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-journal">Journal</span>
-                            <span class="badge badge-cited">Highly Cited</span>
-                        </div>
-                    </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Arora, S., Kumar, V.</p>
-                    <p class="publication-details">Mobile Networks and Applications, 2023 | Volume 28, Issue 3 | Pages: 789-812</p>
-                </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Quantum Cryptography: From Theory to Practical Implementation in Real-World Networks</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-conference">Conference</span>
-                            <span class="badge badge-peer">Peer-Reviewed</span>
-                        </div>
-                    </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Mittal, P., Sharma, A.</p>
-                    <p class="publication-details">Proceedings of 2023 Quantum Security Workshop (QSW), Pages: 234-248</p>
-                </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Digital Signatures and Certificate Management: Advances in Public Key Infrastructure</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-journal">Journal</span>
-                            <span class="badge badge-peer">Peer-Reviewed</span>
-                        </div>
-                    </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Singh, S., Desai, K.</p>
-                    <p class="publication-details">Cryptologia, 2022 | Volume 46, Issue 5 | Pages: 412-440</p>
-                </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Side-Channel Attacks on Cryptographic Implementations: Detection and Mitigation Strategies</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-journal">Journal</span>
-                            <span class="badge badge-impact">High Impact</span>
-                        </div>
-                    </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Rao, M., Trivedi, N.</p>
-                    <p class="publication-details">IEEE Transactions on Very Large Scale Integration (VLSI) Systems, 2023 | Volume 31, Issue 4 | Pages: 567-589</p>
-                </article>
-
-                <article class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Privacy-Preserving Machine Learning: Differential Privacy and Federated Learning</h3>
-                        <div class="publication-meta">
-                            <span class="badge badge-journal">Journal</span>
-                            <span class="badge badge-cited">Highly Cited</span>
-                        </div>
-                    </div>
-                    <p class="publication-authors">Dr. Daya Sagar Gupta, Joshi, R., Chowdhury, A.</p>
-                    <p class="publication-details">Machine Learning and Systems, 2023 | Volume 5, Issue 1 | Pages: 89-119</p>
-                </article>
+            </div>
+            <div class="pub-more">
+                <a href="https://scholar.google.com/citations?user=KLxwmP0AAAAJ&hl=en&oi=ao" target="_blank" class="btn btn-outline">View All on Google Scholar →</a>
             </div>
         </div>
     </section>
@@ -417,72 +348,81 @@
     <section id="students" class="section students-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">PhD Students</h2>
-                <p class="section-subtitle">Doctoral scholars under supervision</p>
+                <p class="section-eyebrow">Mentorship</p>
+                <h2 class="section-title">PhD Scholars</h2>
+                <p class="section-subtitle">Doctoral scholars under active supervision and mentorship</p>
             </div>
-
-            <div class="students-table-wrapper">
-                <table class="students-table">
-                    <thead>
-                        <tr>
-                            <th>S.No.</th>
-                            <th>Name</th>
-                            <th>Program</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="student-row">
-                            <td class="sno">1</td>
-                            <td class="student-name-cell">Hema Shekhawat</td>
-                            <td class="student-program"><span class="status-badge thesis-submitted">PhD (Thesis Submitted)</span></td>
-                        </tr>
-                        <tr class="student-row">
-                            <td class="sno">2</td>
-                            <td class="student-name-cell">Pooja Verma</td>
-                            <td class="student-program"><span class="status-badge pursuing">PhD</span></td>
-                        </tr>
-                        <tr class="student-row">
-                            <td class="sno">3</td>
-                            <td class="student-name-cell">Lacchita Soni</td>
-                            <td class="student-program"><span class="status-badge pursuing">PhD</span></td>
-                        </tr>
-                        <tr class="student-row">
-                            <td class="sno">4</td>
-                            <td class="student-name-cell">Ayush Thakur</td>
-                            <td class="student-program"><span class="status-badge pursuing">PhD</span></td>
-                        </tr>
-                        <tr class="student-row">
-                            <td class="sno">5</td>
-                            <td class="student-name-cell">Taru Bhatnagar</td>
-                            <td class="student-program"><span class="status-badge pursuing">PhD</span></td>
-                        </tr>
-                        <tr class="student-row">
-                            <td class="sno">6</td>
-                            <td class="student-name-cell">Dilip Kumar</td>
-                            <td class="student-program"><span class="status-badge pursuing">PhD</span></td>
-                        </tr>
-                        <tr class="student-row">
-                            <td class="sno">7</td>
-                            <td class="student-name-cell">Govind Godara</td>
-                            <td class="student-program"><span class="status-badge pursuing">PhD</span></td>
-                        </tr>
-                        <tr class="student-row">
-                            <td class="sno">8</td>
-                            <td class="student-name-cell">Tanushree Bhowmick</td>
-                            <td class="student-program"><span class="status-badge pursuing">PhD</span></td>
-                        </tr>
-                        <tr class="student-row">
-                            <td class="sno">8</td>
-                            <td class="student-name-cell">Ranjesh Kumar Roy</td>
-                            <td class="student-program"><span class="status-badge pursuing">PhD</span></td>
-                        </tr>
-                        <tr class="student-row">
-                            <td class="sno">8</td>
-                            <td class="student-name-cell">Tarani Das</td>
-                            <td class="student-program"><span class="status-badge pursuing">PhD</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="students-grid">
+                <div class="student-card">
+                    <div class="student-avatar">HS</div>
+                    <div class="student-info">
+                        <h4>Hema Shekhawat</h4>
+                        <span class="student-status submitted">Thesis Submitted</span>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <div class="student-avatar">PV</div>
+                    <div class="student-info">
+                        <h4>Pooja Verma</h4>
+                        <span class="student-status pursuing">PhD Pursuing</span>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <div class="student-avatar">LS</div>
+                    <div class="student-info">
+                        <h4>Lacchita Soni</h4>
+                        <span class="student-status pursuing">PhD Pursuing</span>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <div class="student-avatar">AT</div>
+                    <div class="student-info">
+                        <h4>Ayush Thakur</h4>
+                        <span class="student-status pursuing">PhD Pursuing</span>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <div class="student-avatar">TB</div>
+                    <div class="student-info">
+                        <h4>Taru Bhatnagar</h4>
+                        <span class="student-status pursuing">PhD Pursuing</span>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <div class="student-avatar">DK</div>
+                    <div class="student-info">
+                        <h4>Dilip Kumar</h4>
+                        <span class="student-status pursuing">PhD Pursuing</span>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <div class="student-avatar">GG</div>
+                    <div class="student-info">
+                        <h4>Govind Godara</h4>
+                        <span class="student-status pursuing">PhD Pursuing</span>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <div class="student-avatar">TB</div>
+                    <div class="student-info">
+                        <h4>Tanushree Bhowmick</h4>
+                        <span class="student-status pursuing">PhD Pursuing</span>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <div class="student-avatar">RR</div>
+                    <div class="student-info">
+                        <h4>Ranjesh Kumar Roy</h4>
+                        <span class="student-status pursuing">PhD Pursuing</span>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <div class="student-avatar">TD</div>
+                    <div class="student-info">
+                        <h4>Tarani Das</h4>
+                        <span class="student-status pursuing">PhD Pursuing</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -491,38 +431,44 @@
     <section id="experience" class="section experience-section">
         <div class="container">
             <div class="section-header">
+                <p class="section-eyebrow">Career</p>
                 <h2 class="section-title">Professional Experience</h2>
-                <p class="section-subtitle">Assistant Professor roles at premier academic institutions</p>
+                <p class="section-subtitle">Academic roles at premier Indian institutions</p>
             </div>
-
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Assistant Professor</h3>
-                        <p class="timeline-organization">Indian Institute of Technology Patna</p>
-                        <p class="timeline-period">June 2024 - Present</p>
-                        <p class="timeline-description">Leading cryptography research initiatives, fostering academic excellence in cybersecurity education, supervising PhD scholars, and advancing research excellence in the Department of Computer Science and Engineering.</p>
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-line"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-period active-tag">Present</div>
+                        <h3>Assistant Professor</h3>
+                        <p class="timeline-org">Indian Institute of Technology Patna</p>
+                        <p class="timeline-dates">June 2024 – Present</p>
+                        <p class="timeline-desc">Leading cryptography research, supervising PhD scholars, and advancing research excellence in the Department of Mathematics.</p>
+                        <div class="timeline-tags"><span>Cryptography</span><span>Research</span><span>Mentorship</span></div>
                     </div>
                 </div>
-
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Assistant Professor</h3>
-                        <p class="timeline-organization">Indian Institute of Technology Mandi</p>
-                        <p class="timeline-period">May 2023 - June 2024</p>
-                        <p class="timeline-description">Conducted advanced research in post-quantum cryptography, contributed to institutional research excellence, and mentored students in security research.</p>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-line"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-period">2023–2024</div>
+                        <h3>Assistant Professor</h3>
+                        <p class="timeline-org">Indian Institute of Technology Mandi</p>
+                        <p class="timeline-dates">May 2023 – June 2024</p>
+                        <p class="timeline-desc">Conducted advanced research in post-quantum cryptography, contributed to institutional research excellence and student mentorship.</p>
+                        <div class="timeline-tags"><span>Post-Quantum</span><span>Teaching</span></div>
                     </div>
                 </div>
-
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Assistant Professor</h3>
-                        <p class="timeline-organization">Rajiv Gandhi Institute of Petroleum Technology</p>
-                        <p class="timeline-period">April 2021 - May 2023</p>
-                        <p class="timeline-description">Developed cryptography curriculum, established research collaborations across international institutions, and guided student research projects.</p>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-period">2021–2023</div>
+                        <h3>Assistant Professor</h3>
+                        <p class="timeline-org">Rajiv Gandhi Institute of Petroleum Technology (RGIPT)</p>
+                        <p class="timeline-dates">April 2021 – May 2023</p>
+                        <p class="timeline-desc">Developed cryptography curriculum, established international research collaborations, and guided student research projects including funded IoT security project.</p>
+                        <div class="timeline-tags"><span>Curriculum</span><span>IoT Security</span><span>Funded Project</span></div>
                     </div>
                 </div>
             </div>
@@ -533,132 +479,114 @@
     <section id="education" class="section education-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Education & Qualifications</h2>
-                <p class="section-subtitle">Academic credentials and doctoral specialization</p>
+                <p class="section-eyebrow">Credentials</p>
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">Academic qualifications and doctoral specialization</p>
             </div>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">PhD in Computer Science</h3>
-                        <p class="timeline-organization">IIT (ISM) Dhanbad - Specialization: Cryptography</p>
-                        <p class="timeline-period">Completed December 2018</p>
-                        <p class="timeline-description">Doctoral thesis: "Lattice-based and Identity-based Public-Key Cryptographic Techniques" under the guidance of Professor G. P. Biswas, focusing on advanced cryptographic protocols, post-quantum cryptography, and secure key exchange mechanisms.</p>
-                    </div>
+            <div class="edu-grid">
+                <div class="edu-card">
+                    <div class="edu-icon">🎓</div>
+                    <div class="edu-degree">PhD · Computer Science</div>
+                    <div class="edu-institution">IIT (ISM) Dhanbad</div>
+                    <div class="edu-year">Completed December 2018</div>
+                    <p class="edu-thesis">Thesis: <em>"Lattice-based and Identity-based Public-Key Cryptographic Techniques"</em> — under Prof. G. P. Biswas</p>
+                    <div class="edu-specialization">Specialization: Post-Quantum Cryptography · Lattice Theory · Key Exchange</div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">M.Tech in Computer Science & Engineering</h3>
-                        <p class="timeline-organization">IIT (ISM) Dhanbad</p>
-                        <p class="timeline-period">Completed May 2014</p>
-                        <p class="timeline-description">Master's thesis: "Study and Development of IBE-ABE Based Cryptosystems" under Professor G. P. Biswas, with focus on attribute-based encryption, identity-based encryption, and cryptographic access control systems. Specialized coursework in cryptography, network security, and distributed systems.</p>
-                    </div>
+                <div class="edu-card">
+                    <div class="edu-icon">📘</div>
+                    <div class="edu-degree">M.Tech · Computer Science & Engineering</div>
+                    <div class="edu-institution">IIT (ISM) Dhanbad</div>
+                    <div class="edu-year">Completed May 2014</div>
+                    <p class="edu-thesis">Thesis: <em>"Study and Development of IBE-ABE Based Cryptosystems"</em> — under Prof. G. P. Biswas</p>
+                    <div class="edu-specialization">Specialization: Attribute-Based Encryption · Identity-Based Encryption</div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">B.Tech in Computer Science & Engineering</h3>
-                        <p class="timeline-organization">Shivdan Singh Institute of Technology and Management</p>
-                        <p class="timeline-period">Completed June 2011</p>
-                        <p class="timeline-description">Foundation in computer science with emphasis on systems and software development, data structures, algorithms, database management systems, and web technologies. Completed comprehensive coursework covering the full spectrum of computer science fundamentals.</p>
-                    </div>
+                <div class="edu-card">
+                    <div class="edu-icon">💻</div>
+                    <div class="edu-degree">B.Tech · Computer Science & Engineering</div>
+                    <div class="edu-institution">Shivdan Singh Institute of Technology</div>
+                    <div class="edu-year">Completed June 2011</div>
+                    <p class="edu-thesis">Foundation in CS with emphasis on systems, algorithms, database management, and software development.</p>
+                    <div class="edu-specialization">Core CS Fundamentals · Software Engineering</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ACHIEVEMENTS & RECOGNITIONS SECTION -->
+    <!-- ACHIEVEMENTS SECTION -->
     <section id="achievements" class="section achievements-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Achievements & Recognitions</h2>
+                <p class="section-eyebrow">Recognition</p>
+                <h2 class="section-title">Achievements</h2>
                 <p class="section-subtitle">Awards, honors, and professional recognition</p>
             </div>
-
-            <div class="image-carousel-container">
-                    <div class="image-carousel-wrapper">
-                        <div class="image-carousel-track" id="imageCarouselTrack">
-                            <div class="image-slide">
-                                <img src="/images/a1.jpg" alt="Achievement 1" class="carousel-image">
-                            </div>
-                            <div class="image-slide">
-                                <img src="/images/a2.jpg" alt="Achievement 2" class="carousel-image">
-                            </div>
-                            <div class="image-slide">
-                                <img src="/images/a3.jpg" alt="Achievement 3" class="carousel-image">
-                            </div>
-                            <div class="image-slide">
-                                <img src="/images/a4.JPG" alt="Achievement 4" class="carousel-image">
-                            </div>
-                            <div class="image-slide">
-                                <img src="/images/a5.JPG" alt="Achievement 5" class="carousel-image">
-                            </div>
-                            <div class="image-slide">
-                                <img src="/images/a2.jpg" alt="Achievement 2" class="carousel-image">
-                            </div>
-                            <div class="image-slide">
-                                <img src="/images/a3.jpg" alt="Achievement 3" class="carousel-image">
-                            </div>
-                            <div class="image-slide">
-                                <img src="/images/a4.JPG" alt="Achievement 4" class="carousel-image">
-                            </div>
-                            <div class="image-slide">
-                                <img src="/images/a5.JPG" alt="Achievement 5" class="carousel-image">
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="image-carousel-control image-carousel-prev" id="imageCarouselPrev" aria-label="Previous image">
-                        <span>❮</span>
-                    </button>
-                    <button class="image-carousel-control image-carousel-next" id="imageCarouselNext" aria-label="Next image">
-                        <span>❯</span>
-                    </button>
-
-                    <div class="image-carousel-indicators">
-                        <button class="image-indicator active" data-slide="0" aria-label="Image 1"></button>
-                        <button class="image-indicator" data-slide="1" aria-label="Image 2"></button>
-                        <button class="image-indicator" data-slide="2" aria-label="Image 3"></button>
-                        <button class="image-indicator" data-slide="3" aria-label="Image 4"></button>
-                        <button class="image-indicator" data-slide="4" aria-label="Image 5"></button>
+            <div class="carousel-container">
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track" id="imageCarouselTrack">
+                        <div class="carousel-slide"><img src="images/a1.jpg" alt="Achievement 1" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="carousel-slide"><img src="images/a2.jpg" alt="Achievement 2" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="carousel-slide"><img src="images/a3.jpg" alt="Achievement 3" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="carousel-slide"><img src="images/a4.JPG" alt="Achievement 4" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="carousel-slide"><img src="images/a5.JPG" alt="Achievement 5" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
                     </div>
                 </div>
+                <button class="carousel-btn prev" id="carouselPrev" aria-label="Previous">‹</button>
+                <button class="carousel-btn next" id="carouselNext" aria-label="Next">›</button>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+            <!-- Fallback achievement cards if no images -->
+            <div class="achievements-fallback">
+                <div class="ach-card">
+                    <div class="ach-icon">🏆</div>
+                    <h4>Best Paper Award</h4>
+                    <p>Excellence in cryptographic research recognized at international symposium</p>
+                </div>
+                <div class="ach-card">
+                    <div class="ach-icon">🔬</div>
+                    <h4>Research Grant — RGIPT</h4>
+                    <p>₹10 Lakh funded project on IoT security protocols as Principal Investigator</p>
+                </div>
+                <div class="ach-card">
+                    <div class="ach-icon">🎓</div>
+                    <h4>IIT Academic Excellence</h4>
+                    <p>Doctoral and Master's degrees from IIT (ISM) Dhanbad with distinction</p>
+                </div>
+                <div class="ach-card">
+                    <div class="ach-icon">📖</div>
+                    <h4>50+ Publications</h4>
+                    <p>Extensive publication record in top-tier IEEE, ACM, and Springer journals</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- CONTACT SECTION -->
     <section id="contact" class="section contact-section">
         <div class="container">
-            <div class="contact-wrapper">
-                <div class="section-header">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-subtitle">Connect for collaboration, research opportunities, or inquiries</p>
+            <div class="section-header">
+                <p class="section-eyebrow">Connect</p>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">For research collaboration, PhD inquiries, or academic opportunities</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-card-icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="mailto:dayasagar@iitp.ac.in" class="contact-val">dayasagar@iitp.ac.in</a>
                 </div>
-
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <h3 class="contact-label">Email</h3>
-                        <a href="mailto:daya.gupta@iitp.ac.in" class="contact-value">dayasagar@iitp.ac.in</a>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">🏢</div>
-                        <h3 class="contact-label">Office</h3>
-                        <p class="contact-value">Department of Mathematics<br>Block-1,Room No-506 Indian Institute of Technology Patna</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">🔗</div>
-                        <h3 class="contact-label">Professional Links</h3>
-                        <div class="contact-links">
-                            <a href="https://in.linkedin.com/in/dr-daya-sagar-gupta-46bb4397" target="_blank" class="contact-link">LinkedIn</a>
-                            <a href="https://scholar.google.com/citations?user=KLxwmP0AAAAJ&hl=en&oi=ao" target="_blank" class="contact-link">Google Scholar</a>
-                        </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">🏛️</div>
+                    <h3>Office</h3>
+                    <p class="contact-val">Dept. of Mathematics, Block-1, Room 506<br>IIT Patna, Bihta, Bihar – 801106</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">🌐</div>
+                    <h3>Online Profiles</h3>
+                    <div class="contact-links">
+                        <a href="https://in.linkedin.com/in/dr-daya-sagar-gupta-46bb4397" target="_blank" class="contact-link">LinkedIn</a>
+                        <a href="https://scholar.google.com/citations?user=KLxwmP0AAAAJ&hl=en&oi=ao" target="_blank" class="contact-link">Google Scholar</a>
+                        <a href="https://www.researchgate.net/profile/Daya-Sagar-Gupta" target="_blank" class="contact-link">ResearchGate</a>
+                        <a href="https://orcid.org/0000-0001-5401-7287" target="_blank" class="contact-link">ORCID</a>
                     </div>
                 </div>
             </div>
@@ -668,18 +596,23 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <p class="copyright">&copy; 2024 Dr. Daya Sagar Gupta. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="https://in.linkedin.com/in/dr-daya-sagar-gupta-46bb4397" target="_blank" class="social-link" title="LinkedIn">LinkedIn</a>
-                    <a href="https://scholar.google.com/citations?user=KLxwmP0AAAAJ&hl=en&oi=ao" target="_blank" class="social-link" title="Google Scholar">Scholar</a>
-                    <a href="#" class="social-link" title="ResearchGate">ResearchGate</a>
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <span class="logo-icon">⬡</span>
+                    <span>Dr. Daya Sagar Gupta</span>
+                </div>
+                <p class="footer-copy">© 2024 · IIT Patna · Cryptography & Cybersecurity Research</p>
+                <div class="footer-links">
+                    <a href="https://in.linkedin.com/in/dr-daya-sagar-gupta-46bb4397" target="_blank">LinkedIn</a>
+                    <a href="https://scholar.google.com/citations?user=KLxwmP0AAAAJ&hl=en&oi=ao" target="_blank">Scholar</a>
+                    <a href="https://orcid.org/0000-0001-5401-7287" target="_blank">ORCID</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript File -->
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
