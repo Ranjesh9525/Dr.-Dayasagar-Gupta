@@ -68,55 +68,50 @@
 
     <!-- HERO SECTION -->
     <section class="hero" id="hero">
-        <div class="hero-content">
-            <div class="hero-badge">🔐 IIT Patna · Cryptography Research Lab</div>
-            <h1 class="hero-title">
-                Dr. Daya Sagar <span class="hero-title-accent">Gupta</span>
-            </h1>
-            <p class="hero-role">Assistant Professor · IIT Patna</p>
-            <p class="hero-description">Pioneering quantum-resistant cryptography, cybersecurity frameworks, and blockchain technology. Advancing digital security through innovative research and mentoring tomorrow's security researchers.</p>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-num">50+</span>
-                    <span class="stat-label">Publications</span>
+        <!-- Full-screen background photo -->
+        <div class="hero-bg">
+            <img src="images/1.jpg" alt="" class="hero-bg-img" aria-hidden="true">
+            <!-- Multi-layer overlay for depth & readability -->
+            <div class="hero-overlay-base"></div>
+            <div class="hero-overlay-gradient"></div>
+            <div class="hero-overlay-vignette"></div>
+        </div>
+
+        <!-- Content sits above the bg -->
+        <div class="hero-inner">
+            <div class="hero-content">
+           
+                <h1 class="hero-title">
+                    Dr. Daya Sagar <span class="hero-title-accent">Gupta</span>
+                </h1>
+                <p class="hero-role">Assistant Professor · IIT Patna</p>
+                <p class="hero-description">Pioneering quantum-resistant cryptography, cybersecurity frameworks, and blockchain technology. Advancing digital security through innovative research and mentoring tomorrow's security researchers.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">50+</span>
+                        <span class="stat-label">Publications</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">10+</span>
+                        <span class="stat-label">PhD Scholars</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">3</span>
+                        <span class="stat-label">IIT Positions</span>
+                    </div>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-num">10+</span>
-                    <span class="stat-label">PhD Scholars</span>
+                <div class="hero-buttons">
+                    <a href="#research" class="btn btn-primary">
+                        <span>Explore Research</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-num">3</span>
-                    <span class="stat-label">IIT Positions</span>
-                </div>
-            </div>
-            <div class="hero-buttons">
-                <a href="#research" class="btn btn-primary">
-                    <span>Explore Research</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
             </div>
         </div>
-        <div class="hero-3d-panel">
-            <div class="hero-photo-frame">
-                <div class="photo-glow-ring"></div>
-                <div class="photo-glow-ring ring2"></div>
-                <div class="photo-wrapper">
-                    <img src="images/1.jpg" alt="Dr. Daya Sagar Gupta" class="hero-photo" onerror="this.parentElement.classList.add('photo-fallback')">
-                    <div class="photo-fallback-icon">👨‍🏫</div>
-                </div>
-                <div class="photo-badge badge-top">
-                    <span class="badge-dot"></span>
-                    <span>IIT Patna</span>
-                </div>
-                
-                <div class="photo-floater floater-1">⛓️</div>
-                <div class="photo-floater floater-2">🛡️</div>
-                <div class="photo-floater floater-3">🔬</div>
-            </div>
-        </div>
+
         <div class="scroll-indicator">
             <div class="scroll-line"></div>
             <span>Scroll</span>
@@ -350,80 +345,264 @@
             <div class="section-header">
                 <p class="section-eyebrow">Mentorship</p>
                 <h2 class="section-title">PhD Scholars</h2>
-                <p class="section-subtitle">Doctoral scholars under active supervision and mentorship</p>
+                <p class="section-subtitle">Doctoral scholars under active supervision and mentorship at IIT Patna</p>
             </div>
-            <div class="students-grid">
-                <div class="student-card">
-                    <div class="student-avatar">HS</div>
-                    <div class="student-info">
-                        <h4>Hema Shekhawat</h4>
-                        <span class="student-status submitted">Thesis Submitted</span>
-                    </div>
+
+            <!-- Summary stats -->
+            <div class="scholars-stats">
+                <div class="sch-stat">
+                    <span class="sch-stat-num">10</span>
+                    <span class="sch-stat-label">Total Scholars</span>
                 </div>
-                <div class="student-card">
-                    <div class="student-avatar">PV</div>
-                    <div class="student-info">
-                        <h4>Pooja Verma</h4>
-                        <span class="student-status pursuing">PhD Pursuing</span>
-                    </div>
+                <div class="sch-stat-div"></div>
+                <div class="sch-stat">
+                    <span class="sch-stat-num">1</span>
+                    <span class="sch-stat-label">Thesis Submitted</span>
                 </div>
-                <div class="student-card">
-                    <div class="student-avatar">LS</div>
-                    <div class="student-info">
-                        <h4>Lacchita Soni</h4>
-                        <span class="student-status pursuing">PhD Pursuing</span>
-                    </div>
-                </div>
-                <div class="student-card">
-                    <div class="student-avatar">AT</div>
-                    <div class="student-info">
-                        <h4>Ayush Thakur</h4>
-                        <span class="student-status pursuing">PhD Pursuing</span>
-                    </div>
-                </div>
-                <div class="student-card">
-                    <div class="student-avatar">TB</div>
-                    <div class="student-info">
-                        <h4>Taru Bhatnagar</h4>
-                        <span class="student-status pursuing">PhD Pursuing</span>
-                    </div>
-                </div>
-                <div class="student-card">
-                    <div class="student-avatar">DK</div>
-                    <div class="student-info">
-                        <h4>Dilip Kumar</h4>
-                        <span class="student-status pursuing">PhD Pursuing</span>
-                    </div>
-                </div>
-                <div class="student-card">
-                    <div class="student-avatar">GG</div>
-                    <div class="student-info">
-                        <h4>Govind Godara</h4>
-                        <span class="student-status pursuing">PhD Pursuing</span>
-                    </div>
-                </div>
-                <div class="student-card">
-                    <div class="student-avatar">TB</div>
-                    <div class="student-info">
-                        <h4>Tanushree Bhowmick</h4>
-                        <span class="student-status pursuing">PhD Pursuing</span>
-                    </div>
-                </div>
-                <div class="student-card">
-                    <div class="student-avatar">RR</div>
-                    <div class="student-info">
-                        <h4>Ranjesh Kumar Roy</h4>
-                        <span class="student-status pursuing">PhD Pursuing</span>
-                    </div>
-                </div>
-                <div class="student-card">
-                    <div class="student-avatar">TD</div>
-                    <div class="student-info">
-                        <h4>Tarani Das</h4>
-                        <span class="student-status pursuing">PhD Pursuing</span>
-                    </div>
+                <div class="sch-stat-div"></div>
+                <div class="sch-stat">
+                    <span class="sch-stat-num">9</span>
+                    <span class="sch-stat-label">Currently Pursuing</span>
                 </div>
             </div>
+
+            <!-- Table wrapper for horizontal scroll on small screens -->
+            <div class="scholars-table-wrapper">
+                <table class="scholars-table">
+                    <thead>
+                        <tr>
+                            <th class="col-sr">Sr.</th>
+                            <th class="col-photo">Photo</th>
+                            <th class="col-name">Name</th>
+                            <th class="col-topic">Research Topic / Area</th>
+                            <th class="col-college">College</th>
+                            <th class="col-status">Status</th>
+                            <th class="col-year">Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <!-- Row 1 -->
+                        <tr class="scholar-row">
+                            <td class="col-sr">
+                                <span class="sr-num">01</span>
+                            </td>
+                            <td class="col-photo">
+                                <div class="scholar-photo-wrap">
+                                    <img
+                                        src="images/students/hema.jpg"
+                                        alt="Hema Shekhawat"
+                                        class="scholar-img"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                    >
+                                    <div class="scholar-img-fallback" style="display:none;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                                        <span>HS</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-name">
+                                <span class="scholar-name">Hema Shekhawat</span>
+                            </td>
+                            <td class="col-topic">
+                                <span class="topic-text">Cryptographic protocols for secure communication in distributed systems</span>
+                            </td>
+                            <td class="col-college">
+                                <span class="college-text">🏛️ IIT Patna</span>
+                            </td>
+                            <td class="col-status">
+                                <span class="scholar-badge submitted">Thesis Submitted</span>
+                            </td>
+                            <td class="col-year">2020</td>
+                        </tr>
+
+                        <!-- Row 2 -->
+                        <tr class="scholar-row">
+                            <td class="col-sr"><span class="sr-num">02</span></td>
+                            <td class="col-photo">
+                                <div class="scholar-photo-wrap">
+                                    <img src="images/students/pooja.jpg" alt="Pooja Verma" class="scholar-img"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="scholar-img-fallback" style="display:none;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                                        <span>PV</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-name"><span class="scholar-name">Pooja Verma</span></td>
+                            <td class="col-topic"><span class="topic-text">Lattice-based cryptography and post-quantum security protocols</span></td>
+                            <td class="col-college"><span class="college-text">🏛️ IIT Patna</span></td>
+                            <td class="col-status"><span class="scholar-badge pursuing">PhD Pursuing</span></td>
+                            <td class="col-year">2021</td>
+                        </tr>
+
+                        <!-- Row 3 -->
+                        <tr class="scholar-row">
+                            <td class="col-sr"><span class="sr-num">03</span></td>
+                            <td class="col-photo">
+                                <div class="scholar-photo-wrap">
+                                    <img src="images/students/lacchita.jpg" alt="Lacchita Soni" class="scholar-img"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="scholar-img-fallback" style="display:none;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                                        <span>LS</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-name"><span class="scholar-name">Lacchita Soni</span></td>
+                            <td class="col-topic"><span class="topic-text">Blockchain-based secure data management for IoT environments</span></td>
+                            <td class="col-college"><span class="college-text">🏛️ IIT Patna</span></td>
+                            <td class="col-status"><span class="scholar-badge pursuing">PhD Pursuing</span></td>
+                            <td class="col-year">2021</td>
+                        </tr>
+
+                        <!-- Row 4 -->
+                        <tr class="scholar-row">
+                            <td class="col-sr"><span class="sr-num">04</span></td>
+                            <td class="col-photo">
+                                <div class="scholar-photo-wrap">
+                                    <img src="images/students/ayush.jpg" alt="Ayush Thakur" class="scholar-img"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="scholar-img-fallback" style="display:none;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                                        <span>AT</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-name"><span class="scholar-name">Ayush Thakur</span></td>
+                            <td class="col-topic"><span class="topic-text">Machine learning-based intrusion detection in cyber-physical systems</span></td>
+                            <td class="col-college"><span class="college-text">🏛️ IIT Patna</span></td>
+                            <td class="col-status"><span class="scholar-badge pursuing">PhD Pursuing</span></td>
+                            <td class="col-year">2022</td>
+                        </tr>
+
+                        <!-- Row 5 -->
+                        <tr class="scholar-row">
+                            <td class="col-sr"><span class="sr-num">05</span></td>
+                            <td class="col-photo">
+                                <div class="scholar-photo-wrap">
+                                    <img src="images/students/taru.jpg" alt="Taru Bhatnagar" class="scholar-img"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="scholar-img-fallback" style="display:none;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                                        <span>TB</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-name"><span class="scholar-name">Taru Bhatnagar</span></td>
+                            <td class="col-topic"><span class="topic-text">Zero-knowledge proofs and their applications in privacy-preserving systems</span></td>
+                            <td class="col-college"><span class="college-text">🏛️ IIT Patna</span></td>
+                            <td class="col-status"><span class="scholar-badge pursuing">PhD Pursuing</span></td>
+                            <td class="col-year">2022</td>
+                        </tr>
+
+                        <!-- Row 6 -->
+                        <tr class="scholar-row">
+                            <td class="col-sr"><span class="sr-num">06</span></td>
+                            <td class="col-photo">
+                                <div class="scholar-photo-wrap">
+                                    <img src="images/students/dilip.jpg" alt="Dilip Kumar" class="scholar-img"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="scholar-img-fallback" style="display:none;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                                        <span>DK</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-name"><span class="scholar-name">Dilip Kumar</span></td>
+                            <td class="col-topic"><span class="topic-text">Quantum-resistant digital signature schemes for cloud security</span></td>
+                            <td class="col-college"><span class="college-text">🏛️ IIT Patna</span></td>
+                            <td class="col-status"><span class="scholar-badge pursuing">PhD Pursuing</span></td>
+                            <td class="col-year">2022</td>
+                        </tr>
+
+                        <!-- Row 7 -->
+                        <tr class="scholar-row">
+                            <td class="col-sr"><span class="sr-num">07</span></td>
+                            <td class="col-photo">
+                                <div class="scholar-photo-wrap">
+                                    <img src="images/students/govind.jpg" alt="Govind Godara" class="scholar-img"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="scholar-img-fallback" style="display:none;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                                        <span>GG</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-name"><span class="scholar-name">Govind Godara</span></td>
+                            <td class="col-topic"><span class="topic-text">Secure multi-party computation and its applications in federated learning</span></td>
+                            <td class="col-college"><span class="college-text">🏛️ IIT Patna</span></td>
+                            <td class="col-status"><span class="scholar-badge pursuing">PhD Pursuing</span></td>
+                            <td class="col-year">2023</td>
+                        </tr>
+
+                        <!-- Row 8 -->
+                        <tr class="scholar-row">
+                            <td class="col-sr"><span class="sr-num">08</span></td>
+                            <td class="col-photo">
+                                <div class="scholar-photo-wrap">
+                                    <img src="images/students/tanushree.jpg" alt="Tanushree Bhowmick" class="scholar-img"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="scholar-img-fallback" style="display:none;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                                        <span>TB</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-name"><span class="scholar-name">Tanushree Bhowmick</span></td>
+                            <td class="col-topic"><span class="topic-text">Cybersecurity frameworks for smart grid and critical infrastructure protection</span></td>
+                            <td class="col-college"><span class="college-text">🏛️ IIT Patna</span></td>
+                            <td class="col-status"><span class="scholar-badge pursuing">PhD Pursuing</span></td>
+                            <td class="col-year">2023</td>
+                        </tr>
+
+                        <!-- Row 9 -->
+                        <tr class="scholar-row">
+                            <td class="col-sr"><span class="sr-num">09</span></td>
+                            <td class="col-photo">
+                                <div class="scholar-photo-wrap">
+                                    <img src="images/ranjesh.jpeg" alt="Ranjesh Kumar Roy" class="scholar-img"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="scholar-img-fallback" style="display:none;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                                        <span>RR</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-name"><span class="scholar-name">Ranjesh Kumar Roy</span></td>
+                            <td class="col-topic"><span class="topic-text">Identity-based encryption and access control in distributed cloud systems</span></td>
+                            <td class="col-college"><span class="college-text">🏛️ IIT Patna</span></td>
+                            <td class="col-status"><span class="scholar-badge pursuing">PhD Pursuing</span></td>
+                            <td class="col-year">2023</td>
+                        </tr>
+
+                        <!-- Row 10 -->
+                        <tr class="scholar-row">
+                            <td class="col-sr"><span class="sr-num">10</span></td>
+                            <td class="col-photo">
+                                <div class="scholar-photo-wrap">
+                                    <img src="images/students/tarani.jpg" alt="Tarani Das" class="scholar-img"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="scholar-img-fallback" style="display:none;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                                        <span>TD</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-name"><span class="scholar-name">Tarani Das</span></td>
+                            <td class="col-topic"><span class="topic-text">Deep learning approaches for anomaly detection in network intrusion systems</span></td>
+                            <td class="col-college"><span class="college-text">🏛️ IIT Patna</span></td>
+                            <td class="col-status"><span class="scholar-badge pursuing">PhD Pursuing</span></td>
+                            <td class="col-year">2024</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="scholars-note">
+                📁 To add student photos, place images named <code>hema.jpg</code>, <code>pooja.jpg</code>, etc. inside <code>images/students/</code> folder.
+            </p>
         </div>
     </section>
 
