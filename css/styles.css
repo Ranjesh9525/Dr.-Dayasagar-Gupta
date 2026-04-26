@@ -240,22 +240,86 @@ img { max-width: 100%; display: block; }
 }
 
 /* =============================================
-   HERO
+   HERO — FULL SCREEN BACKGROUND IMAGE
    ============================================= */
 .hero {
     position: relative;
+    width: 100%;
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: 55fr 45fr;
+    display: flex;
     align-items: center;
-    max-width: var(--max-w);
-    margin: 0 auto;
-    padding: 100px 40px 60px 80px;
-    gap: 40px;
+    justify-content: flex-start;
+    overflow: hidden;
     z-index: 1;
 }
 
-.hero-content { position: relative; z-index: 2; }
+/* Background image layer */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+.hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    will-change: transform;
+}
+/* Overlay 1 — dark base tint */
+.hero-overlay-base {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 13, 26, 0.40);
+}
+/* Overlay 2 — strong left gradient: text zone is fully dark, face stays visible on right */
+.hero-overlay-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(5, 13, 26, 0.97) 0%,
+        rgba(5, 13, 26, 0.95) 30%,
+        rgba(5, 13, 26, 0.80) 48%,
+        rgba(5, 13, 26, 0.25) 65%,
+        transparent 100%
+    );
+}
+/* Overlay 3 — bottom fade into page */
+.hero-overlay-vignette {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(5, 13, 26, 0.25) 0%,
+        transparent 30%,
+        transparent 65%,
+        rgba(5, 13, 26, 0.95) 100%
+    );
+}
+
+/* Inner wrapper — content locked to left side */
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 130px 48px 90px 24px;
+    /* Use grid: content takes left 52%, right 48% is image showing through */
+    display: grid;
+    grid-template-columns: 52% 48%;
+    align-items: center;
+}
+
+.hero-content {
+    /* Content confined to left column — face stays clear */
+    grid-column: 1 / 2;
+    max-width: 560px;
+    position: relative;
+    z-index: 2;
+}
 
 .hero-badge {
     display: inline-flex;
@@ -277,7 +341,7 @@ img { max-width: 100%; display: block; }
 .hero-title {
     font-family: var(--font-display);
     font-size: clamp(28px, 3.6vw, 54px);
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.1;
     letter-spacing: -1.5px;
     color: var(--white);
@@ -551,13 +615,15 @@ img { max-width: 100%; display: block; }
    ============================================= */
 .scroll-indicator {
     position: absolute;
-    bottom: 32px;
-    left: 80px;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    opacity: 0.5;
+    opacity: 0.55;
+    z-index: 3;
     animation: fadeInUp 1s 0.8s var(--ease-smooth) both;
 }
 .scroll-line {
@@ -909,75 +975,269 @@ img { max-width: 100%; display: block; }
 .pub-more { text-align: center; margin-top: 36px; }
 
 /* =============================================
-   STUDENTS
+   STUDENTS — SCHOLARS TABLE
    ============================================= */
 .students-section {
     background: linear-gradient(180deg, transparent, rgba(10,22,40,0.7));
 }
 
-.students-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 16px;
-}
-
-.student-card {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    background: var(--navy-card);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--radius-sm);
-    padding: 16px 20px;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s var(--ease-smooth);
-}
-.student-card:hover {
-    border-color: var(--border);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-}
-
-.student-avatar {
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--blue), var(--cyan));
+/* ---- Summary stats row ---- */
+.scholars-stats {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 32px;
+    margin-bottom: 40px;
+    padding: 20px 32px;
+    background: rgba(37,99,235,0.06);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    backdrop-filter: blur(10px);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sch-stat { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.sch-stat-num {
     font-family: var(--font-display);
-    font-size: 13px;
+    font-size: 32px;
     font-weight: 800;
     color: var(--white);
-    flex-shrink: 0;
+    line-height: 1;
+}
+.sch-stat-label {
+    font-size: 12px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+.sch-stat-div {
+    width: 1px;
+    height: 44px;
+    background: var(--border);
 }
 
-.student-info { flex: 1; }
-.student-info h4 {
+/* ---- Table wrapper — enables horizontal scroll on small screens ---- */
+.scholars-table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--glass-border);
+    background: rgba(10, 22, 40, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-overflow-scrolling: touch;
+    /* subtle scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: var(--blue) transparent;
+}
+.scholars-table-wrapper::-webkit-scrollbar { height: 5px; }
+.scholars-table-wrapper::-webkit-scrollbar-track { background: transparent; }
+.scholars-table-wrapper::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 10px;
+}
+
+/* ---- Table base ---- */
+.scholars-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    min-width: 920px;
+}
+
+/* ---- Header ---- */
+.scholars-table thead tr {
+    background: linear-gradient(90deg, rgba(37,99,235,0.15), rgba(6,182,212,0.08));
+    border-bottom: 1px solid rgba(59,130,246,0.25);
+}
+.scholars-table th {
+    padding: 18px 20px;
+    text-align: left;
+    font-family: var(--font-display);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    white-space: nowrap;
+}
+.scholars-table th.col-sr      { width: 56px;  text-align: center; }
+.scholars-table th.col-photo   { width: 100px; text-align: center; }
+.scholars-table th.col-name    { width: 190px; }
+.scholars-table th.col-topic   { min-width: 240px; }
+.scholars-table th.col-college { width: 150px; }
+.scholars-table th.col-status  { width: 155px; }
+.scholars-table th.col-year    { width: 75px;  text-align: center; }
+
+/* ---- Body rows ---- */
+.scholar-row {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: background 0.2s var(--ease-smooth);
+}
+.scholar-row:last-child { border-bottom: none; }
+.scholar-row:nth-child(even) {
+    background: rgba(255,255,255,0.022);
+}
+.scholar-row:hover {
+    background: rgba(37,99,235,0.08);
+}
+
+.scholars-table td {
+    padding: 18px 20px;
+    vertical-align: middle;
+    color: #c4d4e8;
+}
+
+/* Sr. number */
+.col-sr { text-align: center; }
+.sr-num {
     font-family: var(--font-display);
     font-size: 14px;
     font-weight: 700;
-    color: var(--white);
-    margin-bottom: 4px;
+    color: rgba(255,255,255,0.22);
 }
 
-.student-status {
-    font-family: var(--font-display);
-    font-size: 10.5px;
-    font-weight: 600;
-    padding: 2px 9px;
-    border-radius: 100px;
-    letter-spacing: 0.03em;
+/* ---- Photo cell ---- */
+.col-photo { text-align: center; padding: 12px 14px; }
+
+.scholar-photo-wrap {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 2.5px solid rgba(59,130,246,0.35);
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.1), 0 6px 20px rgba(0,0,0,0.4);
+    transition: all 0.3s var(--ease-smooth);
+    position: relative;
+    background: linear-gradient(135deg, rgba(37,99,235,0.18), rgba(6,182,212,0.12));
+    flex-shrink: 0;
 }
-.student-status.submitted {
+.scholar-row:hover .scholar-photo-wrap {
+    border-color: var(--blue-light);
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.25), 0 8px 28px rgba(37,99,235,0.3);
+    transform: scale(1.1);
+}
+
+.scholar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* Fallback: shown when image errors or missing */
+.scholar-img-fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    background: linear-gradient(135deg, rgba(37,99,235,0.22), rgba(6,182,212,0.16));
+}
+.scholar-img-fallback svg {
+    width: 26px; height: 26px;
+    color: rgba(148,163,184,0.65);
+    stroke: rgba(148,163,184,0.65);
+}
+.scholar-img-fallback span {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--blue-light);
+    letter-spacing: 0.05em;
+    line-height: 1;
+}
+
+/* Name */
+.col-name { padding-left: 16px; }
+.scholar-name {
+    font-family: var(--font-display);
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--white);
+    display: block;
+    line-height: 1.3;
+}
+
+/* Research topic */
+.col-topic { padding-right: 20px; }
+.topic-text {
+    font-size: 14px;
+    color: #8ba5c5;
+    line-height: 1.55;
+    display: block;
+}
+
+/* Status badge */
+.col-status { white-space: nowrap; }
+.scholar-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-family: var(--font-display);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+.scholar-badge.submitted {
     background: rgba(16,185,129,0.12);
-    border: 1px solid rgba(16,185,129,0.3);
+    border: 1px solid rgba(16,185,129,0.35);
     color: #6ee7b7;
 }
-.student-status.pursuing {
+.scholar-badge.pursuing {
     background: rgba(59,130,246,0.1);
-    border: 1px solid rgba(59,130,246,0.25);
+    border: 1px solid rgba(59,130,246,0.28);
     color: #93c5fd;
+}
+
+/* Year */
+.col-year {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+/* College */
+.col-college { white-space: nowrap; }
+.college-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--amber);
+    background: rgba(245,158,11,0.08);
+    border: 1px solid rgba(245,158,11,0.22);
+    border-radius: 7px;
+    padding: 4px 12px;
+    white-space: nowrap;
+}
+
+/* ---- Note below table ---- */
+.scholars-note {
+    margin-top: 18px;
+    font-size: 12.5px;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.6;
+}
+.scholars-note code {
+    background: rgba(37,99,235,0.12);
+    border: 1px solid rgba(37,99,235,0.25);
+    border-radius: 5px;
+    padding: 1px 7px;
+    font-size: 12px;
+    color: var(--cyan);
+    font-family: 'Courier New', monospace;
 }
 
 /* =============================================
@@ -1437,56 +1697,242 @@ a.contact-val:hover { color: var(--cyan); }
 .reveal-delay-5 { transition-delay: 0.5s; }
 
 /* =============================================
-   RESPONSIVE
+   RESPONSIVE — COMPLETE
    ============================================= */
+
+/* ---- Tablet: 1024px ---- */
 @media (max-width: 1024px) {
-    .hero { grid-template-columns: 1fr; padding: 120px 24px 80px 80px; }
-    .hero-3d-panel { display: none; }
+    /* Hero */
+    .hero-inner {
+        padding: 110px 32px 80px 24px;
+        grid-template-columns: 60% 40%;
+    }
+    .hero-content { max-width: 480px; }
+    .hero-title { white-space: normal; font-size: clamp(30px, 5vw, 50px); }
+    .hero-overlay-gradient {
+        background: linear-gradient(
+            to right,
+            rgba(5,13,26,0.97) 0%,
+            rgba(5,13,26,0.95) 35%,
+            rgba(5,13,26,0.70) 55%,
+            rgba(5,13,26,0.15) 75%,
+            transparent 100%
+        );
+    }
+
+    /* Sections */
     .research-grid { grid-template-columns: repeat(2, 1fr); }
     .edu-grid { grid-template-columns: 1fr 1fr; }
     .achievements-fallback { grid-template-columns: repeat(2, 1fr); }
-    .hero-title { white-space: normal; font-size: clamp(32px, 5vw, 54px); }
+    .contact-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ---- Mobile: 768px ---- */
 @media (max-width: 768px) {
-    .container, .footer .container { padding-left: 24px; }
-    .nav-container { padding-left: 24px; }
-    .hero { padding-left: 24px; padding-right: 24px; }
-    .scroll-indicator { left: 24px; }
 
+    /* --- Sidebar: hidden from left, becomes bottom icon bar --- */
+    .platform-sidebar {
+        /* Reset vertical centering */
+        position: fixed;
+        left: 0;
+        top: auto;
+        bottom: 0;
+        transform: none;
+        z-index: 800;
+
+        /* Horizontal row */
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 0;
+        padding: 0;
+
+        /* Style */
+        background: rgba(5, 13, 26, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid var(--border);
+        box-shadow: 0 -4px 30px rgba(0,0,0,0.4);
+    }
+
+    .sidebar-link {
+        /* Reset desktop expand styles */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        padding: 10px 0;
+        max-width: none;
+        width: 25%;          /* 4 icons = 25% each */
+        border: none;
+        border-radius: 0;
+        border-right: 1px solid var(--border);
+        font-size: 10px;
+        background: transparent;
+        white-space: nowrap;
+    }
+    .sidebar-link:last-child { border-right: none; }
+
+    /* Always show label + icon on mobile */
+    .sidebar-link span {
+        opacity: 1;
+        transform: none;
+        font-size: 9.5px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+    }
+
+    .sidebar-link svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .sidebar-link:hover {
+        max-width: none;
+        background: rgba(37,99,235,0.15);
+        border-color: transparent;
+        color: var(--white);
+    }
+
+    /* Push page content up so sidebar doesn't cover it */
+    body { padding-bottom: 64px; }
+
+    /* --- Navigation --- */
     .nav-toggle { display: flex; }
+    .nav-container { padding: 0 16px; }
+
     .nav-links {
         display: none;
         position: fixed;
-        top: 65px; left: 0; right: 0;
+        top: 61px; left: 0; right: 0;
+        bottom: 64px; /* don't overlap mobile sidebar */
         flex-direction: column;
         background: rgba(5,13,26,0.98);
         backdrop-filter: blur(20px);
-        padding: 24px;
+        padding: 20px 16px;
         gap: 4px;
         border-bottom: 1px solid var(--border);
         z-index: 888;
+        overflow-y: auto;
     }
     .nav-links.open { display: flex; }
 
-    .platform-sidebar { display: none; }
-    .research-grid { grid-template-columns: 1fr; }
-    .edu-grid { grid-template-columns: 1fr; }
-    .achievements-fallback { grid-template-columns: 1fr 1fr; }
-    .contact-grid { grid-template-columns: 1fr; }
-    .footer-inner { flex-direction: column; text-align: center; }
-    .pub-card { grid-template-columns: 1fr; gap: 12px; }
-    .pub-year { font-size: 14px; color: var(--muted); }
+    /* Dropdown in mobile nav */
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: rgba(37,99,235,0.06);
+        border: 1px solid var(--border);
+        margin: 4px 0 4px 16px;
+        border-radius: var(--radius-sm);
+    }
 
-    .section { padding: 70px 0; }
-    .hero { min-height: auto; padding-top: 100px; padding-bottom: 60px; }
-    .hero-title { letter-spacing: -1px; }
+    /* --- Hero --- */
+    .hero { min-height: 100svh; }
+    .hero-inner {
+        padding: 90px 20px 100px 20px;
+        grid-template-columns: 1fr;  /* single column on mobile */
+    }
+    .hero-content { max-width: 100%; grid-column: 1; }
+    .hero-title {
+        font-size: clamp(28px, 7vw, 44px);
+        white-space: normal;
+        letter-spacing: -1px;
+    }
+    /* On mobile: full dark overlay since content spans full width */
+    .hero-overlay-gradient {
+        background: rgba(5, 13, 26, 0.78);
+    }
+    .hero-badge { font-size: 11.5px; }
+    .hero-description { font-size: 15px; }
     .hero-stats { gap: 16px; }
+    .stat-num { font-size: 24px; }
+
+    /* --- Layout / container --- */
+    .container { padding: 0 20px; }
+    .footer .container { padding: 0 20px; }
+    .section { padding: 64px 0; }
+
+    /* --- Research --- */
+    .research-grid { grid-template-columns: 1fr; gap: 14px; }
+
+    /* --- Education --- */
+    .edu-grid { grid-template-columns: 1fr; }
+
+    /* --- Achievements --- */
+    .achievements-fallback { grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    /* --- Contact --- */
+    .contact-grid { grid-template-columns: 1fr; }
+
+    /* --- Publications --- */
+    .pub-card { grid-template-columns: 1fr; gap: 10px; }
+    .pub-year { font-size: 13px; color: var(--muted); }
+
+    /* --- Students --- */
+    .scholars-stats { gap: 20px; padding: 16px 24px; }
+    .sch-stat-num { font-size: 26px; }
+    .scholars-table { font-size: 13.5px; }
+    .scholars-table th { padding: 14px 14px; font-size: 10.5px; }
+    .scholars-table td { padding: 14px 14px; }
+    .scholar-photo-wrap { width: 58px; height: 58px; }
+    .scholar-img-fallback svg { width: 22px; height: 22px; }
+    .scholar-img-fallback span { font-size: 10px; }
+    .scholar-name { font-size: 14px; }
+    .topic-text { font-size: 13px; }
+    .college-text { font-size: 12px; padding: 3px 9px; }
+    .scholar-badge { font-size: 10.5px; padding: 4px 11px; }
+
+    /* --- Timeline --- */
+    .timeline { padding-left: 24px; }
+
+    /* --- Footer --- */
+    .footer-inner { flex-direction: column; text-align: center; gap: 10px; }
+    .footer-links { justify-content: center; }
 }
 
+/* ---- Small Mobile: 480px ---- */
 @media (max-width: 480px) {
-    .achievements-fallback { grid-template-columns: 1fr; }
-    .hero-buttons { flex-direction: column; }
+    .hero-title { font-size: clamp(26px, 8vw, 38px); }
+    .hero-buttons { flex-direction: column; gap: 10px; }
     .btn { width: 100%; justify-content: center; }
-    .students-grid { grid-template-columns: 1fr; }
+    .hero-stats { flex-wrap: wrap; gap: 12px; }
+    .stat-divider { display: none; }
+
+    .achievements-fallback { grid-template-columns: 1fr; }
+    .scholars-stats { flex-wrap: wrap; gap: 14px; }
+    .sch-stat-div { display: none; }
+    /* scholars table on small mobile — tighter but still scrollable */
+    .scholars-table { font-size: 12.5px; min-width: 700px; }
+    .scholars-table th { padding: 12px 10px; font-size: 10px; }
+    .scholars-table td { padding: 12px 10px; }
+    .scholar-photo-wrap { width: 50px; height: 50px; }
+    .scholar-img-fallback svg { width: 18px; height: 18px; }
+    .scholar-img-fallback span { font-size: 9px; }
+    .scholar-name { font-size: 13px; }
+    .topic-text { font-size: 12px; }
+    .college-text { font-size: 11px; padding: 3px 8px; }
+    .scholar-badge { font-size: 10px; padding: 3px 9px; }
+    .research-grid { grid-template-columns: 1fr; }
+    .edu-grid { grid-template-columns: 1fr; }
+    .pub-filter-bar { gap: 6px; }
+    .pub-filter { padding: 6px 14px; font-size: 12px; }
+
+    .section-title { letter-spacing: -0.8px; }
+    .section { padding: 52px 0; }
+
+    /* Bottom sidebar — bigger tap targets on small screens */
+    .sidebar-link { padding: 12px 0; }
+    .sidebar-link svg { width: 22px; height: 22px; }
+}
+
+/* ---- Very small: 360px ---- */
+@media (max-width: 360px) {
+    .hero-title { font-size: 24px; }
+    .sidebar-link span { display: none; }
+    .sidebar-link { padding: 14px 0; }
 }
