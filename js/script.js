@@ -378,15 +378,25 @@ filterBtns.forEach(btn => {
 
 
 /* -----------------------------------------------
-   HERO PARALLAX (subtle)
+   HERO PARALLAX — bg image scrolls slower than page
    ----------------------------------------------- */
-const heroContent = document.querySelector('.hero-content');
+const heroBgImg   = document.querySelector('.hero-bg-img');
+const heroInner   = document.querySelector('.hero-inner');
+
 window.addEventListener('scroll', () => {
-    if (!heroContent) return;
     const y = window.scrollY;
-    if (y < window.innerHeight) {
-        heroContent.style.transform = `translateY(${y * 0.2}px)`;
-        heroContent.style.opacity   = String(1 - y / (window.innerHeight * 0.8));
+    const vh = window.innerHeight;
+
+    if (y <= vh * 1.2) {
+        // Parallax: bg image moves up at 40% of scroll speed
+        if (heroBgImg) {
+            heroBgImg.style.transform = `translateY(${y * 0.4}px)`;
+        }
+        // Fade + slight lift on the content text
+        if (heroInner && y < vh) {
+            heroInner.style.transform = `translateY(${y * 0.15}px)`;
+            heroInner.style.opacity   = String(Math.max(0, 1 - y / (vh * 0.75)));
+        }
     }
 }, { passive: true });
 
